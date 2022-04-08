@@ -29,9 +29,9 @@ export default new Vuex.Store({
       store.commit("setCategories", payload)
     },
     fetchNews(store){
-      axios.get("https://pokeapi.co/api/v2/pokemon").then((response) => {
+      axios.get("https://newsapi.org/v2/everything?q=" + this.state.categories + "&apiKey=c7d465fddb28475881ccd0ba8642c64b").then((response) => {
         console.log("response", response)
-        store.commit("setListNews", response.data.results)
+        store.commit("setListNews", response.data.articles)
       })
     }
   },
