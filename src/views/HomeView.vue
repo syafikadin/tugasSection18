@@ -60,7 +60,7 @@
         <router-link :to="'/detail/id' + index">
           <div class="barNews">
               <v-img :src="itemNews.urlToImage" />
-              <h1>{{ itemNews.title }}</h1>
+              <h1>{{ itemNews.name }}</h1>
               <p>{{ itemNews.description }}</p>
               <v-btn v-if="news[index].author === null"
                 rounded
